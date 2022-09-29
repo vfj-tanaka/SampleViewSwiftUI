@@ -29,24 +29,21 @@ struct FirstView: View {
     
     var body: some View {
         
-        NavigationStack {
+        ScrollView {
             
-            ScrollView {
+            LazyVGrid(columns: columns, spacing: 20) {
                 
-                LazyVGrid(columns: columns, spacing: 20) {
-                    
-                    ForEach(symbols) { symbol in
-                        VStack {
-                            Image(systemName: symbol.image)
-                            Text(symbol.name)
-                        }
+                ForEach(symbols) { symbol in
+                    VStack {
+                        Image(systemName: symbol.image)
+                        Text(symbol.name)
                     }
                 }
-                // 画面端からの余白を設定
-                .padding(20)
             }
-            .navigationTitle("サンプル")
+            // 画面端からの余白を設定
+            .padding(20)
         }
+        .navigationTitle("サンプル")
     }
 }
 
