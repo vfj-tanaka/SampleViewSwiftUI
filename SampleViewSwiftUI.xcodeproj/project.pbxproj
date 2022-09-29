@@ -14,6 +14,8 @@
 		FC0503C128E4206500630663 /* SampleViewSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0503C028E4206500630663 /* SampleViewSwiftUITests.swift */; };
 		FC0503CB28E4206500630663 /* SampleViewSwiftUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0503CA28E4206500630663 /* SampleViewSwiftUIUITests.swift */; };
 		FC0503CD28E4206500630663 /* SampleViewSwiftUIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0503CC28E4206500630663 /* SampleViewSwiftUIUITestsLaunchTests.swift */; };
+		FC0503DA28E588BC00630663 /* FirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0503D928E588BC00630663 /* FirstView.swift */; };
+		FC0503DC28E588D600630663 /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0503DB28E588D600630663 /* SecondView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		FC0503C628E4206500630663 /* SampleViewSwiftUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SampleViewSwiftUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC0503CA28E4206500630663 /* SampleViewSwiftUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleViewSwiftUIUITests.swift; sourceTree = "<group>"; };
 		FC0503CC28E4206500630663 /* SampleViewSwiftUIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleViewSwiftUIUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FC0503D928E588BC00630663 /* FirstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstView.swift; sourceTree = "<group>"; };
+		FC0503DB28E588D600630663 /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +100,8 @@
 			children = (
 				FC0503AF28E4206400630663 /* SampleViewSwiftUIApp.swift */,
 				FC0503B128E4206400630663 /* ContentView.swift */,
+				FC0503D928E588BC00630663 /* FirstView.swift */,
+				FC0503DB28E588D600630663 /* SecondView.swift */,
 				FC0503B328E4206500630663 /* Assets.xcassets */,
 				FC0503B528E4206500630663 /* Preview Content */,
 			);
@@ -258,6 +264,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC0503B228E4206400630663 /* ContentView.swift in Sources */,
+				FC0503DA28E588BC00630663 /* FirstView.swift in Sources */,
+				FC0503DC28E588D600630663 /* SecondView.swift in Sources */,
 				FC0503B028E4206400630663 /* SampleViewSwiftUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
