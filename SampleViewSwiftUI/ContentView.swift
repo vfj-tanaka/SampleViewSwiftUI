@@ -10,13 +10,19 @@ import SwiftUI
 struct ContentView: View {
     
     init() {
-        UITabBar.appearance().unselectedItemTintColor = .lightGray
-        UITabBar.appearance().backgroundColor = .blue
+        let navigationBarAppearance = UINavigationBarAppearance()
+        navigationBarAppearance.backgroundColor = .white
+        navigationBarAppearance.shadowColor = .clear
+        UINavigationBar.appearance().standardAppearance = navigationBarAppearance
+        UINavigationBar.appearance().scrollEdgeAppearance = navigationBarAppearance
+        let tabBarAppearance = UITabBar.appearance()
+        tabBarAppearance.unselectedItemTintColor = .lightGray
+        tabBarAppearance.backgroundColor = .blue
     }
     
     enum Tabs: String {
         case tab0 = "メッセージ"
-        case tab1 = "スタンプ"
+        case tab1 = "プロフィール"
     }
     
     @State private var navigationTitle: String = Tabs.tab0.rawValue
@@ -42,10 +48,28 @@ struct ContentView: View {
             }
             .accentColor(.white)
             .navigationTitle(navigationTitle)
+            .navigationBarTitleDisplayMode(.inline)
             .onChange(of: selectedTab) { tab in
                 navigationTitle = selectedTab.rawValue
             }
-            .navigationTitle("サンプル")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button(action: {
+                        print("左のボタンが押されたよ")
+                    }) {
+                        Image(systemName: "ellipsis.circle")
+                    }
+                }
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(action: {
+                        print("右のボタンが押されたよ")
+                    }){
+                        HStack {
+                            Image(systemName: "gearshape")
+                        }
+                    }
+                }
+            }
         }
     }
 }
